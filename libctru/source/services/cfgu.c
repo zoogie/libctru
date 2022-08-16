@@ -234,7 +234,7 @@ Result CFG_UpdateConfigSavegame(void)
 	Result ret = 0;
 	u32 *cmdbuf = getThreadCommandBuffer();
 
-	cmdbuf[0] = IPC_MakeHeader(0x803,0,0); // 0x8030000
+	cmdbuf[0] = IPC_MakeHeader(0x403,0,0); // 0x4030000
 
 	if(R_FAILED(ret = svcSendSyncRequest(cfguHandle)))return ret;
 
